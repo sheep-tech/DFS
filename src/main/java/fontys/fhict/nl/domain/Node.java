@@ -1,14 +1,41 @@
 package fontys.fhict.nl.domain;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 public class Node {
+    private String label;
     private boolean visited;
-    private List<Node> vertex;
+    private List<Node> child;
 
-    public Node(List<Node> vertex) {
+    public Node(String label) {
+        this.label = label;
         this.visited = false;
-        this.vertex = vertex;
+        this.child = new ArrayList<>();
+    }
+
+    public Node(ArrayList<Node> child) {
+        this.visited = false;
+        this.child = child;
+    }
+
+    @Override
+    public String toString() {
+//        return "label: " + label + " num of child: " + child.size();
+        return "label: " + label;
+    }
+
+    public void addChild(Node child) {
+        this.child.add(child);
+    }
+
+    public Node getFirstUnvisitedChild() {
+        for(Node node : this.child) {
+            if(!node.isVisited())
+                return node;
+        }
+        return null;
     }
 
     public boolean isVisited() {
@@ -19,11 +46,7 @@ public class Node {
         this.visited = visited;
     }
 
-    public List<Node> getVertex() {
-        return vertex;
-    }
-
-    public void setVertex(List<Node> vertex) {
-        this.vertex = vertex;
+    public List<Node> getChild() {
+        return child;
     }
 }
