@@ -6,7 +6,8 @@ public class DFS {
     private String visitedHistory;
     private Stack<Node> stack;
     public DFS() {
-        stack = new Stack<>();
+        this.stack = new Stack<>();
+        this.visitedHistory = new String();
     }
 
     public String visit(Node tree) {
@@ -29,8 +30,7 @@ public class DFS {
         if(!node.isVisited()) {
             node.setVisited(true);
             // save visited order in this global variable
-            this.visitedHistory += node.toString() + "\n";
-
+//            this.visitedHistory += node.toString() + "\n";
             // get child list of the current node
             List<Node> unvisitedNodeList = node.getChild();
             // reverse child list in order to visit the first child and not the last one

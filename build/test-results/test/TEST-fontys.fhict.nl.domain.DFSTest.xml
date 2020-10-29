@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.fhict.nl.domain.DFSTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-29T10:22:12" hostname="LAPTOP-I9DSV66L" time="0.012">
+  <properties/>
+  <testcase name="DFSArrayListListVisitPerformanceTest()" classname="fontys.fhict.nl.domain.DFSTest" time="0.012"/>
+  <system-out><![CDATA[Result: 
+
+954000
+Execution time: 1ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

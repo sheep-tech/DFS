@@ -1,15 +1,16 @@
 package fontys.fhict.nl.domain;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.TreeSet;
 
 public class Node {
-    private String label;
+    private char label;
     private boolean visited;
     private List<Node> child;
 
-    public Node(String label) {
+    public Node(char label) {
         this.label = label;
         this.visited = false;
         this.child = new ArrayList<>();
@@ -23,7 +24,7 @@ public class Node {
     @Override
     public String toString() {
 //        return "label: " + label + " num of child: " + child.size();
-        return "label: " + label;
+        return /*"label: " + */ label + "";
     }
 
     public void addChild(Node child) {
