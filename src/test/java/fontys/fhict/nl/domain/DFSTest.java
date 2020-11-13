@@ -40,7 +40,7 @@ class DFSTest {
 
     // DFS using arrayList
     @Test
-    void DFSArrayListListVisitPerformanceTest() {
+    void DFSArrayListVisitPerformanceTest() {
         NodeSampleGenerator sampleGenerator = new NodeSampleGenerator();
 
         Node branch = sampleGenerator.buildDynamicTreeSample(5);

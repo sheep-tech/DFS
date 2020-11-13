@@ -5,6 +5,7 @@ import java.util.*;
 public class DFS {
     private String visitedHistory;
     private Stack<Node> stack;
+
     public DFS() {
         this.stack = new Stack<>();
         this.visitedHistory = new String();
